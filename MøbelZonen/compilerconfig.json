@@ -1,0 +1,18 @@
+﻿[
+  {
+    "outputFile": "Styles/StyleSheet.css",
+    "inputFile": "Styles/StyleSheet.less"
+  },
+  {
+    "outputFile": "Styles/AdminStyles.css",
+    "inputFile": "Styles/AdminStyles.less"
+  },
+  {
+    "outputFile": "Styles/ImportSassTest.css",
+    "inputFile": "Styles/ImportSassTest.scss"
+  },
+  {
+    "outputFile": "Styles/SassTest.css",
+    "inputFile": "Styles/SassTest.scss"
+  }
+]

@@ -1,0 +1,69 @@
+﻿@model MZrepo.EditKat
+@{
+    ViewBag.Title = "Edit";
+}
+@*Edit kategorier i Admin*@
+<h2>Rediger Kategori</h2>
+
+<div class="SEO-Table">
+    <h3>SEO</h3>
+    <form action="/Admin/AKategori/EditSEO/" method="post">
+        <table>
+            <tr>
+                <td>
+                    <h4>Titel:</h4>
+                    <p><b>Browserens titel.</b> brugs så man kan se hvad der er på siden når man kigger på sidens titel</p>
+                </td>
+                <td>
+                    <input type="text" name="Titel" value="@Model.Seo.Title" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4>Keywords:</h4>
+                    <p><b>Meta Keywords</b>. Dette felt bruges når der skal laves google søgninger.<br /> <b>Vigtigt for SEO!</b>.</p>
+                </td>
+                <td>
+                    <textarea name="Keywords">@Model.Seo.Keywords</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4>Description:</h4>
+                    <p><b>Meta Description.</b> Dette felt bruges til at beskrive hvad der er på siden.<br /> <b>Vigtigt for SEO!</b>.</p>
+                </td>
+                <td>
+                    <textarea name="Description">@Model.Seo.Description</textarea>
+                </td>
+
+            </tr>
+        </table>
+        <input type="submit" value="Gem" />
+        <input type="hidden" name="ID" value="@Model.Seo.ID" />
+        <input type="hidden" name="katID" value="@Model.Kategori.ID" />
+    </form>
+</div>
+
+<div class="Data-Table">
+    <h3>Kategori Data</h3>
+    <br />
+    <form action="/Admin/AKategori/Edit/" method="post">
+        <table>
+            <tr>
+                <td>Navn:</td>
+                <td>
+                    <input type="text" name="Navn" value="@Model.Kategori.Navn" />
+                </td>
+            </tr>
+            <tr>
+                <td>Sortering:</td>
+                <td><input type="text" name="Sortering" value="@Model.Kategori.Sortering" /></td>
+            </tr>
+        </table>
+        <input type="submit" value="Gem" />
+        <input type="hidden" name="ID" value="@Model.Kategori.ID" />
+    </form>
+</div>
+
+
+<div class="ClearAll"></div>

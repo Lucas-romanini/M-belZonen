@@ -1,0 +1,133 @@
+﻿@BG-color: #ffffff;
+@font-color: #000000;
+@Gray: #c7cbcc;
+@body-BGC: #e1e1e1;
+@width: 762px;
+@border: #b1b1b1 2px solid;
+@border-inside: #e4e4e4 2px solid;
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    background-color: @body-BGC;
+    font-size:10px;
+}
+
+.Header, .Main-Content, footer {
+    width: @width;
+    margin: auto;
+}
+
+h2 {
+    font-size: 12px;
+    color:#FF7F00;
+}
+
+.clearAll{
+    clear:both;
+}
+
+
+/*▼▼Header▼▼*/
+
+header {
+    background-color: @Gray;
+    padding-top: 16px;
+    height: 148px;
+}
+
+.Header {
+    background-image: url('../Content/GFX/Header-banner.png');
+    height: 132px;
+}
+
+
+/*▼▼Main content▼▼*/
+.white-border {
+    border-top: solid #fff 1px;
+} 
+
+.Main-Content {
+    border: @border;
+    border-top: none;
+    min-height: 339px;
+    background-color: @BG-color;
+}
+
+.View{
+    width:480px;
+    float:left;
+    margin-left:13px;
+    margin:13px 14px 0 13px;
+    h2{
+        border-bottom:@border-inside;
+    }
+}
+
+.kontakt{
+    border-radius:10px;
+   &-info{
+       float:left;
+       width:200px;
+       margin-top:26px;
+       margin-left:32px;
+   }
+   &-IMG{
+       float:right;
+   }
+}
+
+.Side-menu {
+    width: 138px;
+    height:100%;
+    border-right:@border-inside;
+    float: left;
+    margin-top:21px;
+    padding-left:17px;
+    h2{
+        margin-bottom:14px;
+    }
+    a{
+        font-size:12px;
+        text-decoration:none;
+        color:#000000;
+        &:hover{
+            color:#FF7F00;
+        }
+    }
+}
+
+
+.Produkt{
+    float:right;
+    min-height:100px;
+    width:457px;
+    border:@border;
+    &-Info{
+        float:left;
+    }
+    &-Billede{
+        max-height:95px;
+        float:right;
+    }
+}
+
+/*▼▼Footer▼▼*/
+
+footer {
+    background-color: @Gray;
+    border:@border;
+    border-top: none 0;
+    border-radius: 0 0 10px 10px;
+    height: 21px;
+    color:#000000;
+    font-size: 9px;
+}
+
+.Footer {
+}

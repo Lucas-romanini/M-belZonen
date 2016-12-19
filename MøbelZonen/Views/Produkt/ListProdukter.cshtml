@@ -1,0 +1,34 @@
+﻿@using MZrepo
+@model MZrepo.ProduktListe
+
+
+@{
+    ViewBag.Title = Model.SEO.Title;
+}
+
+@section head{
+    <meta name="keywords" content="@Model.SEO.Keywords" />
+    <meta name="description" content="@Model.SEO.Description" />
+    
+}
+
+<h2>@Model.KategoriNavn</h2>
+<hr />
+
+<section class="Produkt">
+    @foreach (Produkt p in Model.Produkter)
+    {
+    <div class="Produkt-Info">
+
+        <h2>@p.Navn</h2>
+        <br />
+        <p> @p.Tekst</p>
+        <br />
+        <br />
+        <p>Pris: @p.Pris kr</p>
+    
+    </div>
+        <img src="~/Content/IMG/@p.Billede"  class="Produkt-Billede" />
+    }
+
+</section>

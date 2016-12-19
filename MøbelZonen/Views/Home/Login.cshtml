@@ -1,0 +1,29 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    @*@Crypto.Hash("indsæt password her")*@
+    <form action="/Home/Login/" method="post">
+        Email:
+        <br />
+        <input type="email" name="email" />
+        <br />
+        Adgangskode
+        <br />
+        <input type="password" name="adgangskode" />
+        <br />
+        <input type="submit" value="Log ind" /><a href="/Home/GlemtAdgangskode">Glemt adgangskode</a>
+    </form>
+
+
+
+</body>
+</html>

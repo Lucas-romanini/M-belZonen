@@ -1,0 +1,13 @@
+﻿@using MZrepo
+@model List<MZrepo.Kategori>
+
+<h2>Kategorier</h2>
+
+
+@foreach (Kategori k in Model)
+{
+
+    <a href="/Produkt/ListProdukter/@k.ID">-@k.Navn</a>
+    <br />
+
+}

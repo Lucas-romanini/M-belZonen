@@ -1,0 +1,23 @@
+﻿@model MZrepo.Kontakt
+@{
+    ViewBag.Title = "Kontakt";
+}
+
+<h2>Kontakt</h2>
+
+<div class="kontakt-info">
+    <strong>@Model.Navn</strong>
+    <p>@Model.Adresse</p>
+    <p>@Model.PostNr @Model.Bynavn</p>
+    <br />
+    <p>Tlf.: (+45)@Model.Tlf</p>
+    <p>Fax: (+45)@Model.Fax</p>
+    <br />
+    <p>Mail: @Model.Email</p>
+    <br />
+    <p>@Html.Raw(Model.Tider)</p>
+</div>
+
+<div class="kontakt-IMG">
+    <img src="~/Content/IMG/Kontakt/@Model.Billede" alt="@Model.Navn" />
+</div>

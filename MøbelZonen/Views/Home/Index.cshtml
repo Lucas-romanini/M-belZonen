@@ -1,0 +1,11 @@
+﻿@model MZrepo.Indhold
+@{
+    ViewBag.Title = "Index";
+}
+@*Home controller Index*@
+<div class="Home-Page"> 
+    <h2>Forsiden</h2>
+    @Model.Overskrift
+
+    @Html.Raw(Model.Tekst)
+</div>

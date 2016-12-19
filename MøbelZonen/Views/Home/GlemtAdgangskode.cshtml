@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "GlemtAdgangskode";
+}
+
+<h2>GlemtAdgangskode</h2>
+
+<form action="/Home/GlemtAdgangskode/" method="post">
+    <input type="email" name="email" />
+    <br />
+    <input type="submit" value="Send" />
+    @ViewBag.MSG
+</form>

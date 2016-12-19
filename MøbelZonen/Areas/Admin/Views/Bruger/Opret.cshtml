@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Opret";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Opret</h2>
+
+<form action="/Admin/Bruger/Opret/" method="post">
+
+    Level:<select name="level">
+        <option value="1">Admin</option>
+        <option value="2">Bruger</option>
+    </select>
+    <br />
+    Email:<input type="email" name="email" />
+    <br />
+    Navn:<input type="text" name="navn" />
+    <br />
+    Adganskode:<input type="text" name="adganskode" />
+    <br />
+    Gentag Adgangskode:<input type="text" name="gentag" />
+    <input type="submit" value="Opret Bruger" />
+    @ViewBag.MSG
+</form>
+

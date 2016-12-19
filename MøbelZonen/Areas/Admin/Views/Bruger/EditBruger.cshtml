@@ -1,0 +1,29 @@
+﻿@model MZrepo.Bruger
+
+@{
+    ViewBag.Title = "EditBruger";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit Bruger</h2>
+
+<form action="/Admin/Bruger/EditBruger/" method="post">
+    Level:<select name="level">
+        <option value="1">Admin</option>
+        <option value="2">Bruger</option>
+    </select>
+    <br />
+    Email:<input type="email" name="email" value="@Model.Email" />
+    <br />
+    Navn:<input type="text" name="navn" value="@Model.Navn" />
+    <br />
+    Adgangskode:<input type="password" name="Adganskode" />
+    @ViewBag.GammelAdgangskode
+    <br />
+    Ny adganskode:<input type="password" name="NyAdganskode"  />
+    @ViewBag.NyAdgangskode
+    <br />
+    Gentag ny adgangskode:<input type="text" name="gentag" />
+    <input type="submit" value="Gem" />
+    <input type="hidden" name="ID" value="@Model.ID" />
+</form>

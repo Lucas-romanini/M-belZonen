@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    @RenderSection("head", required: false)
+    <link href="~/Styles/StyleSheet.min.css" rel="stylesheet" />
+    <!--Main layout-->
+</head>
+<body>
+    <header>
+        <div class="Header">
+
+        </div>
+    </header>
+
+
+    <div class="white-border">
+        <section class="Main-Content">
+            <section class="Side-menu">
+                @{
+                    Html.RenderAction("Menu", "Data");
+                }
+            </section>
+
+            <section class="View">
+                @RenderBody()
+            </section>
+
+            <div class="clearAll"></div>
+
+        </section>
+    </div>
+
+    <footer>
+        @{
+            Html.RenderAction("Footer", "Data");
+        }
+    </footer>
+
+</body>
+</html>
